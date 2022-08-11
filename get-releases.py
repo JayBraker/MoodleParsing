@@ -4,8 +4,8 @@ import urllib.request
 import json
 
 build_no = sys.argv[1] if len(sys.argv) > 1 else "\d+"
+# Usage of urllib to work straight with any recent python3 installation, no pip needed
 url = "https://docs.moodle.org/dev/Releases"
-#request = requests.get(url)
 request = urllib.request.Request(url)
 try:
     response = urllib.request.urlopen(request)
